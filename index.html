@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Emporio Tamarin</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a id="roadmap" onClick="document.getElementById('roadmap-img').scrollIntoView()">Roadmap</a></li>
+            <a href="https://twitter.com/EmporioTamarin">
+                <i class="fab fa-twitter" href="https://twitter.com/EmporioTamarin" style="font-size:48px;color:rgb(0, 174, 255)"></i>
+            </a>
+            <a href="https://twitter.com/EmporioTamarin">
+                <i class='fab fa-discord' style='font-size:48px;color:rgb(86, 70, 228)'></i>
+            </a>
+        </ul>
+        <img src="./images/menu-btn.png" alt="" class="menu-btn">
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <h2>Emporio Tamarin</h2>
+            <div class="line"></div>
+            <button class="buy-btn" onClick="document.getElementById('buy-section').scrollIntoView()">Buy now</button>
+        </div>
+    </header>
+
+    <section>
+        <div class="section-div" id="buy-section">
+            <h1>How to buy Emporio Tamarin NFT</h1>
+            <p class="description">Please send exactly 35 Ada to this wallet address
+                 and your Emporor Tamarin will be minted
+                  and send to your adress</p>
+            <img src="./images/wallet.png">
+            <div class="wallet-address-div">
+                <p class="wallet-address" id="wallet"> addr1qxynxy3mkh8patsjt6sfak6p2pnar6p4zrwv86lmqpjfeavrk4620kl069ghan4hl27vng6l984fdg4l3gdk3yaxsamqucwwuf</p>
+                
+                <img src="./images/copy-clipboard.png" class="copy-clipboard-btn" onclick="copyToClipboard()">
+            </div>
+        </div>
+        <div class="section-div">
+            <h1 id="roadmap-img">Roadmap</h1>
+            <div class="roadmap-div">
+                <img src="./images/roadmapcrop.png">
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn')
+        const navLink = document.querySelector('.nav-links')
+
+        menuBtn.addEventListener('click', () => {
+            navLink.classList.toggle('mobile-menu')
+        })
+
+        function copyToClipboard() {
+            var copyText = document.getElementById("wallet");
+            var textArea = document.createElement("textarea");
+            textArea.value = copyText.textContent;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("Copy");
+            textArea.remove();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.header-content {
+    margin-top: 5%;
+    color: white;
+    text-align: center;
+}
+
+
+.header-content h2 {
+    font-size: 70px;
+    color: rgb(136, 51, 161);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.buy-btn {
+    width: 30%;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px;
+    border-color: rgb(255, 214, 117);
+    margin-top: 3%;
+    color:rgb(255, 214, 117);
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 5%;
+    margin-top: 1%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.nav-links a{
+   margin: 30px;
+}
+
+.nav-links li {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px;
+    color:rgb(255, 214, 117);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    border-radius: 40px;
+}
+
+.menu-btn {
+    visibility: hidden;
+}
+
+.roadmap-div img {
+    margin-top: 100px;
+    width: 60%;
+    padding-left: 5%;
+}
+
+@media only screen and (max-width: 850px){
+    .header-content h2 {
+        margin-top: 100px;
+    }
+
+    .buy-btn {
+        width: 150px;
+        height: 70px;
+        margin-top: 60%;
+    }
+
+    .navbar{
+        padding: 0;
+        height: 100%;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background: rgb(255, 214, 117);
+        margin-top: -5000px;
+    }
+    .nav-links a{
+        margin-top: 30px auto;
+    }
+    .nav-links li {
+        font-size: 35px;
+        font-weight: bold;
+        color:rgb(163, 43, 233);
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 100px;
+        margin-bottom: 30px;
+    }
+    .menu-btn {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        visibility: inherit;
+    }
+
+    .mobile-menu {
+        margin-top: 0px;
+    }
+    
+    .roadmap-div img {
+        width: 100%;
+    }
+}
+
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./images/background2.jpg);
+    background-position: center;
+    flex-direction: column;
+}
+
+.section-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    word-wrap: break-word;         /* All browsers since IE 5.5+ */
+    overflow-wrap: break-word;     /* Renamed property in CSS3 draft spec */
+    width: 100%;
+}
+
+.wallet-address-div {
+    display: flex;
+    align-items: center;
+    border-color: rgb(249, 251, 253);
+    width: 80%;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+.section-div h1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: block;
+  color: white;
+  font-size: 32px;
+}
+
+.description {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px
+}
+
+.section-div h1, div, p, img {
+    margin: 10px auto;
+}
+
+.copy-clipboard-btn {
+    width: 40px;
+}
+
+.wallet-address {
+    font-size: 20px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+    white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
+.roadmap-div {
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
