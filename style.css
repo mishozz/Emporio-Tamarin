@@ -30,15 +30,31 @@ header {
 
 
 .buy-btn {
-    width: 30%;
+    display: none;
+    width: 50%;
     height: 70px;
     background-color: rgb(255, 255, 255);
     border-radius: 40px;
-    border-color: rgb(255, 214, 117);
+    border-color: rgb(233, 179, 52);
     margin-top: 3%;
     color:rgb(255, 214, 117);
     font-size: 35px;
     font-weight: bold;
+}
+
+#countdown-div {
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px;
+    border-color: rgb(182, 143, 54);
+    margin-top: 3%;
+    color:rgb(255, 214, 117);
+    font-size: 35px;
+    font-weight: bold; 
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
 }
 
 .navbar {
@@ -51,6 +67,11 @@ header {
     height: 5%;
     margin-top: 1%;
 }
+
+#qr-code {
+    width: 20%;
+}
+
 
 .nav-links {
     list-style: none;
@@ -81,14 +102,23 @@ header {
     padding-left: 5%;
 }
 
+.section-div h1, div, p, img {
+    margin: 10px auto;
+}
+
 @media only screen and (max-width: 850px){
     .header-content h2 {
         margin-top: 100px;
     }
 
     .buy-btn {
-        width: 150px;
+        width: 170px;
         height: 70px;
+        margin-top: 60%;
+    }
+
+    #countdown-div {
+        width: 70%;
         margin-top: 60%;
     }
 
@@ -106,6 +136,11 @@ header {
     .nav-links a{
         margin-top: 30px auto;
     }
+
+    #qr-code {
+        width: 40%;
+    }
+
     .nav-links li {
         font-size: 35px;
         font-weight: bold;
@@ -143,6 +178,10 @@ section {
     flex-direction: column;
 }
 
+#buy-section {
+    display: none;
+}
+
 .section-div {
     display: flex;
     align-items: center;
@@ -151,6 +190,7 @@ section {
     word-wrap: break-word;         /* All browsers since IE 5.5+ */
     overflow-wrap: break-word;     /* Renamed property in CSS3 draft spec */
     width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .wallet-address-div {
@@ -160,6 +200,7 @@ section {
     width: 80%;
     border-radius: 10px;
     background-color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .section-div h1 {
@@ -172,13 +213,13 @@ section {
 }
 
 .description {
+    width: 80%;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px
-}
-
-.section-div h1, div, p, img {
-    margin: 10px auto;
+    font-size: 20px;
+    word-wrap: break-word;     
+    overflow-wrap: break-word;
+    text-justify: inter-cluster;
 }
 
 .copy-clipboard-btn {
@@ -202,4 +243,5 @@ section {
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
