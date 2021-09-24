@@ -10,11 +10,11 @@
 <body>
     <nav class="navbar">
         <ul class="nav-links">
-            <li><a id="roadmap" onClick="document.getElementById('roadmap-img').scrollIntoView()">Roadmap</a></li>
+            <li><a id="roadmap">Roadmap</a></li>
             <a href="https://twitter.com/EmporioTamarin">
                 <i class="fab fa-twitter" href="https://twitter.com/EmporioTamarin" style="font-size:48px;color:rgb(0, 174, 255)"></i>
             </a>
-            <a href="https://twitter.com/EmporioTamarin">
+            <a href="https://discord.gg/R7SS4gFZ">
                 <i class='fab fa-discord' style='font-size:48px;color:rgb(86, 70, 228)'></i>
             </a>
         </ul>
@@ -24,26 +24,32 @@
     <header>
         <div class="header-content">
             <h2>Emporio Tamarin</h2>
-            <div class="line"></div>
-            <button class="buy-btn" onClick="document.getElementById('buy-section').scrollIntoView()">Buy now</button>
+            <div id="countdown-div">
+                <p>Launching in</p>
+                <p id="countdown"></p>
+            </div>
+            <button class="buy-btn" id= "buy-btn-id">Buy now</button>
         </div>
     </header>
 
     <section>
         <div class="section-div" id="buy-section">
             <h1>How to buy Emporio Tamarin NFT</h1>
-            <p class="description">Please send exactly 35 Ada to this wallet address
-                 and your Emporor Tamarin will be minted
-                  and send to your adress</p>
-            <img src="./images/wallet.png">
+            <p class="description">Please send exactly 33 Ada to this wallet address
+                 and your Emporio Tamarin will be minted
+                  and send to your adress.</p>
+            <img id="qr-code" src="./images/qr-code.png">
             <div class="wallet-address-div">
-                <p class="wallet-address" id="wallet"> addr1qxynxy3mkh8patsjt6sfak6p2pnar6p4zrwv86lmqpjfeavrk4620kl069ghan4hl27vng6l984fdg4l3gdk3yaxsamqucwwuf</p>
+                <p class="wallet-address" id="wallet"> addr1v9fj8x5gvy9mm359lv0khdv4she6m44gxk0jgs6hm8a9hdgr3rh74</p>
                 
                 <img src="./images/copy-clipboard.png" class="copy-clipboard-btn" onclick="copyToClipboard()">
             </div>
+            <p class="description">IMPORTANT! Do not send ada from any exchange like Coinbase, Binance, etc. Otherwise you won't recieve your NFT,
+                because these exchanges do not support cardano native tokens.
+                Use cardano wallets like Yoroi, Daedalus, AdaLite, etc.</p>
         </div>
         <div class="section-div">
-            <h1 id="roadmap-img">Roadmap</h1>
+            <h1 id="roadmap-img" id="h1-roadmap">Roadmap</h1>
             <div class="roadmap-div">
                 <img src="./images/roadmapcrop.png">
             </div>
@@ -51,23 +57,7 @@
     </section>
 
 
-    <script>
-        const menuBtn = document.querySelector('.menu-btn')
-        const navLink = document.querySelector('.nav-links')
-
-        menuBtn.addEventListener('click', () => {
-            navLink.classList.toggle('mobile-menu')
-        })
-
-        function copyToClipboard() {
-            var copyText = document.getElementById("wallet");
-            var textArea = document.createElement("textarea");
-            textArea.value = copyText.textContent;
-            document.body.appendChild(textArea);
-            textArea.select();
-            document.execCommand("Copy");
-            textArea.remove();
-        }
+    <script src="./script.js">
     </script>
 </body>
 </html>
